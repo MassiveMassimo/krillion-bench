@@ -1,0 +1,53 @@
+{
+  "name": "krillion-bench",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "test": "node --test tests/*.test.ts",
+    "typecheck": "next typegen && tsc --noEmit",
+    "lint": "oxlint src scripts tests",
+    "check:react": "react-doctor . --yes --no-telemetry --no-supply-chain --no-color --blocking error",
+    "format": "oxfmt --write",
+    "format:check": "oxfmt --check",
+    "krillion": "node scripts/krillion.ts",
+    "probe:protocol": "node scripts/protocol-cost-probe.ts",
+    "continue:dev": "node scripts/correction-continuation.ts",
+    "pilot": "node scripts/openrouter-pilot.ts"
+  },
+  "dependencies": {
+    "@base-ui/react": "^1.8.0",
+    "@hugeicons/core-free-icons": "^4.3.5",
+    "@hugeicons/react": "^1.1.10",
+    "@radix-ui/react-accordion": "^1.2.21",
+    "@radix-ui/react-slot": "^1.4.0",
+    "@radix-ui/react-tabs": "^1.1.22",
+    "@tailwindcss/postcss": "^4.3.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^14.0.0",
+    "lucide-react": "^1.53.0",
+    "next": "^16.4.0",
+    "postcss": "^8.5.29",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "tailwind-merge": "^3.7.0",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@shadcn/lint": "^0.2.0",
+    "@types/node": "^24.19.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "oxfmt": "^0.72.0",
+    "oxlint": "^1.87.0",
+    "react-doctor": "^0.9.17",
+    "typescript": "^7.0.2"
+  },
+  "engines": {
+    "node": ">=24.2"
+  }
+}

@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+.local/
+.impeccable/
+.claude/
+.codex/
+.DS_Store
+coverage/
+.next/
+out/
+*.tsbuildinfo

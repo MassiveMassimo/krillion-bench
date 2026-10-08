@@ -1,0 +1,33 @@
+@keyframes gradient-depth {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(75vh);
+  }
+}
+
+@keyframes particle-depth {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50vh);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll(root block)) and (animation-range: 0px 100vh) {
+    .gradient {
+      animation: gradient-depth auto linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0px 100vh;
+    }
+
+    .particles {
+      animation: particle-depth auto linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0px 100vh;
+    }
+  }
+}
